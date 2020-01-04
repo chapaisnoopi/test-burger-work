@@ -3,12 +3,13 @@
 }
 
 .menu {
-    flex-direction: column;
     display: none;
 }
 
 .show {
     display: flex;
+    flex-direction: column;
+
 }
 
 .menu li {
