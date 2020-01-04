@@ -2,16 +2,13 @@
     cursor: pointer;
 }
 
-.hide {
+.menu {
+    flex-direction: column;
     display: none;
 }
 
 .show {
     display: flex;
-}
-
-.menu {
-    flex-direction: column;
 }
 
 .menu li {
