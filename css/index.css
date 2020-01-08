@@ -22,8 +22,8 @@ h1 {
     display: none;
 }
 
-nav {
-    position: relative;
+.menu li {
+    list-style: none;
 }
 
 .show {
@@ -47,8 +47,9 @@ nav .menu a {
     border: 1px solid gray;
 }
 
-.menu li {
-    list-style: none;
+nav .menu a:hover {
+    background-color: ghostwhite;
+    cursor: pointer;
 }
 
 .hide-button p {
@@ -80,7 +81,7 @@ nav .menu a {
     display: block;
     height: 5px;
     margin: 7px 0;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .button:hover:before {
@@ -95,14 +96,8 @@ nav .menu a {
     transform: scale(0);
 }
 
-nav .menu a:hover {
-    background-color: ghostwhite;
-    cursor: pointer;
-}
-
 @media (min-width: 700px) {   
     h1 {
-        text-align: center;
         font-size: 2rem;
     }
     
@@ -111,26 +106,15 @@ nav .menu a:hover {
     }
 
     .menu {
-        position: static;
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         padding: 0;
         margin: 0;
-        background-color: white;
-    }
-
-    nav .menu li {
-        list-style: none;
-        border: none;
-        padding: 0;
     }
 
     nav .menu a {
         border: 1px solid transparent;
-        text-decoration: none;
-        color: black;
-        padding: 5px;
+        padding: 0 5px 0 5px;
     }
 
     nav .menu a:hover {
