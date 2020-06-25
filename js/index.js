@@ -5,7 +5,6 @@
 // }
 const button = document.querySelector('.button');
 const menu = document.querySelector('.menu');
-const body = document.querySelector('body');
 // button.addEventListener('mouseover', () => menu.classList.add('show') );
 // button.addEventListener('click', () => menu.classList.toggle('show') );
 // menu.addEventListener('mouseleave', () => menu.classList.remove('show') );
@@ -32,12 +31,16 @@ const body = document.querySelector('body');
 //     menu.onmouseleave = () => menu.classList.remove('show');
 // }
 
-if ('ontouchstart' in document.documentElement) {
-    body.addEventListener('click', () => menu.classList.remove('show'), true); 
-    button.addEventListener('click', () => menu.classList.toggle('show')); 
-} else {
-    button.addEventListener('mouseover', () => menu.classList.add('show'));
-    body.addEventListener('click', () => menu.classList.remove('show'), true); 
-    button.addEventListener('click', () => menu.classList.toggle('show')); 
-    menu.addEventListener('mouseleave', () => menu.classList.remove('show'));
-}
+button.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
+
+document.addEventListener('click', (event) => {
+       event.target.classList.contains('a')
+    || event.target.classList.contains('button')
+    || event.target.parentNode.classList
+    && event.target.parentNode.classList.contains('button')
+    || menu.classList.remove('show');
+});
+
+
